@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background-color: #000;
+  scroll-behavior: smooth;
+}
+
+header {
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px 0px 10px;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+  z-index: 2;
+}
+
+#PageIndex ul {
+  display: flex;
+  font-size: 1.2rem;
+  list-style: none;
+  gap: 20px;
+  padding-right: 90px;
+}
+
+#LanguageIndex ul {
+  display: none;
+  list-style: none;
+  gap: 20px;
+}
+
+#LanguageIndex > ul.active {
+    display: flex;
+}
+
+#LanguageIndex ul{
+    display: none;
+    flex-direction: column;
+    background: #001f3f;
+    position: absolute;
+    cursor: pointer;
+    top: 70px;
+    right: 90px;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 11;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00aaff;
+}
+
+nav li:hover {
+  color: #00aaff;
+}
+
+.Menu {
+  display: none;
+  font-size: 2rem;
+  color: #00aaff;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  z-index: 11;
+}
+
+.Language {
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 27px;
+  right: 90px;
+  z-index: 11;
+}
+
+.Hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.HeroVideo {
+  position: absolute;
+  width: 1080px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.HeroContent {
+  z-index: 1;
+  padding: 40px;
+}
+
+.Hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.Hero p {
+  font-size: 1.2rem;
+}
+
+section {
+  padding: 60px 40px;
+}
+
+.About{
+  padding-bottom: 0px;
+}
+
+.About div{
+  max-width: 880px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #001f3f;
+}
+
+.Contact {
+  background-color: #001f3f;
+}
+
+.GamesContainer {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.GameCard {
+  background: #002b5c;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.GameCard img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 10px;
+  background: #00aaff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+}
+
+.SocialMedia{
+  background-color: black;
+}
+
+.SocialMedia h2{
+  margin-bottom: 20px;
+}
+
+.SocialIcons > a{
+  padding: 0px 5px;
+}
+
+#FooterLogo {
+  display: block;
+  width: 85%;
+  max-width: 400px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #777;
+  border-top: 1px solid #777;;
+}
+
+/* Responsividade */
+@media (min-width: 1024px) {
+  
+}
+
+@media (min-width: 768px) {
+  .Language {
+    right: 40px;
+  }
+
+  #LanguageIndex ul {
+    display: none;
+    flex-direction: column;
+    background: #001f3f;
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 11;
+  }
+
+  .About{
+    font-size: 1.35em;
+  }
+}
+
+@media (max-width: 768px) {
+  #PageIndex ul{
+    display: none;
+    flex-direction: column;
+    background: #001f3f;
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 11;
+  }
+
+  #PageIndex > ul.active {
+    display: flex;
+  }
+
+  .Menu {
+    display: block;
+  }
+
+  .Language {
+    display: block;
+  }
+
+  .HeroVideo{
+    margin-right: 35px;
+  }
+
+  .SocialMedia h2{
+    text-align: center;
+  }
+
+  #FooterLogo {
+    margin: auto;
+  }
+
+  .SocialIcons {
+    display: flex;
+    justify-content: center;
+  }
+}

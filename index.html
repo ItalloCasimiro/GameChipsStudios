@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Chip's Studios</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="Logo"><img src="Images/Studio/BlueChip.png" width="100"></div>
+    <div class="Menu" onclick="toggleMenu()">☰</div>
+    <div class="Language" onclick="languageMenu()"><img src="Images/Social/Globe.png" width="32"></div>
+    <nav id="PageIndex">
+      <ul>
+        <li><a href="#About">Sobre</a></li>
+        <li><a href="#Games">Jogos</a></li>
+        <li><a href="#Contact">Contato</a></li>
+      </ul>
+    </nav>
+    <nav id="LanguageIndex">
+      <ul>
+        <li>Português</li>
+        <li>English</li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section class="Hero">
+    <video
+     class="HeroVideo"
+      src="Images/Studio/Animation.mp4"
+      autoplay
+      loop
+      muted
+      playsinline>
+    </video>
+
+    <div class="HeroContent">
+     <h1>Jogos que Marcam uma Geração</h1>
+     <p>Inovação, Diversão e Criatividade em cada detalhe.</p>
+    </div>
+  </section>
+
+  <section class="About" id="About">
+    <div>
+      <h2>Sobre Nós</h2>
+      <p>A Game Chip's Studios foi fundada em 2025 por Itallo Casimiro e nasceu de uma ideia de criar jogos únicos e experiências memoráveis, para deixar sua marca no mercado brasileiro de desenvolvimento de jogos. O estúdio busca desenvolver jogos para os jogadores brasileiros e expandir para jogos internacionais.
+      </p>
+    </div>
+  </section>
+
+  <section class="Games" id="Games">
+    <h2 style="text-align: center; font-size: 3em; margin-bottom: 30px;">Nossos Jogos</h2>
+    <div class="GamesContainer">
+      <div class="GameCard">
+        <img src="https://via.placeholder.com/300x180" alt="Game 1">
+        <h3>Neon Drift</h3>
+        <p>Corridas futuristas com gráficos de última geração.</p>
+      </div>
+      <div class="GameCard">
+        <img src="https://via.placeholder.com/300x180" alt="Game 2">
+        <h3>Pixel Quest</h3>
+        <p>Uma aventura retrô com alma moderna.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="Contact" id="Contact">
+    <h2 style="text-align: center; font-size: 3em; margin-bottom: 30px;">Fale Conosco</h2>
+    <form>
+      <input type="text" placeholder="Nome" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Mensagem" required style="resize: vertical;"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section class="SocialMedia">
+    <img src="Images/Studio/StudioName.png" id="FooterLogo">
+    <hr>
+    <br>
+    <h2>Siga-nos nas Redes Sociais</h2>
+    <div class="SocialIcons">
+      <a href="#"><img src="Images/Social/Instagram.png" alt="Instagram" width="32"></a>
+      <a href="#"><img src="Images/Social/Twitter.png" alt="Twitter" width="32"></a>
+      <a href="#"><img src="Images/Social/Youtube.png" alt="YouTube" width="32"></a>
+      <a href="#"><img src="Images/Social/PressKit.png" alt="Press Kit" width="32"></a>
+      <a href="#"><img src="Images/Social/Tiktok.png" alt="TikTok" width="32"></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="CurrentYear"></span> Game Chip's Studios. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
