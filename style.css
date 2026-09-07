@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body, html {
-  font-family: 'Bungee', Arial, Helvetica, sans-serif;
+  font-family: "Comic Relief", Arial, Helvetica, sans-serif;
   color: #fff;
   background-color: #000;
   scroll-behavior: smooth;
