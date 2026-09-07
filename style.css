@@ -5,7 +5,7 @@
 }
 
 body, html {
-  font-family: 'Bungee', cursive;
+  font-family: 'Bungee', Arial, Helvetica, sans-serif;
   color: #fff;
   background-color: #000;
   scroll-behavior: smooth;
