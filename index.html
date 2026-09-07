@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Game Chip's Studios</title>
   <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="Images/Studio/BlueChip.ico"/>
 </head>
 <body>
 
@@ -16,16 +17,16 @@
     </div>
     <nav id="PageIndex">
       <ul>
-        <li><a href="#About">Sobre</a></li>
-        <li><a href="#Games">Jogos</a></li>
-        <li><a href="#Team">Equipe</a></li>
-        <li><a href="#Contact">Contato</a></li>
+        <li><a href="#About" data-lang="navAbout">Sobre</a></li>
+        <li><a href="#Games" data-lang="navGames">Jogos</a></li>
+        <li><a href="#Team" data-lang="navTeam">Equipe</a></li>
+        <li><a href="#Contact" data-lang="navContact">Contato</a></li>
       </ul>
     </nav>
     <nav id="LanguageIndex">
       <ul>
-        <li>Português</li>
-        <li>English</li>
+        <li onclick="setLanguage('pt')">Português</li>
+        <li onclick="setLanguage('en')">English</li>
       </ul>
     </nav>
   </header>
@@ -41,21 +42,22 @@
     </video>
 
     <div class="HeroContent">
-    <div><h1>Jogos que Marcam uma<br><span style="color: #72C4EC; text-shadow: 2px 2px 10px rgba(114, 196, 236, 0.5);">Geração</span></h1></div>
-     <p>Desenvolvendo Jogos Criativos com Inovação e Chips.</p>
+    <div>
+      <h1 data-lang="heroTitle">Jogos que Marcam uma<br><span style="color: #72C4EC; text-shadow: 2px 2px 10px rgba(114, 196, 236, 0.5);">Geração</span></h1>
     </div>
+     <p data-lang="heroDescription">Desenvolvendo Jogos Criativos com Inovação e Chips.</p>
   </section>
 
   <section class="About" id="About">
     <div>
-      <h2>Sobre Nós</h2>
-      <p>A Game Chip's Studios foi fundada em 2025 e nasceu de uma ideia de criar jogos únicos e experiências memoráveis, para deixar sua marca no mercado de jogos brasileiro. O estúdio busca desenvolver para os jogadores brasileiros e expandir para projetos internacionais.
+      <h2 data-lang="aboutTitle">Sobre Nós</h2>
+      <p data-lang="aboutText">A Game Chip's Studios foi fundada em 2025 e nasceu de uma ideia de criar jogos únicos e experiências memoráveis, para deixar sua marca no mercado de jogos brasileiro. O estúdio busca desenvolver para os jogadores brasileiros e expandir para projetos internacionais.
       </p>
     </div>
   </section>
 
   <section class="Games" id="Games">
-    <h2 class="SectionTitle">Nossos Jogos</h2>
+    <h2 class="SectionTitle" data-lang="gamesTitle">Nossos Jogos</h2>
 
     <div class="GameShowcase">
         <div class="GameImage">
@@ -63,17 +65,17 @@
         </div>
 
         <div class="GameInfo">
-            <span class="GameTag">EM DESENVOLVIMENTO</span>
+            <span class="GameTag" data-lang="gameStatus">EM DESENVOLVIMENTO</span>
 
             <h3>Dead Man's Jackpot</h3>
 
-            <p>
+            <p data-lang="gameDescription">
                 Um roguelike de cartas 2D onde você utiliza dados,
                 cartas e trapaças para completar contratos e alcançar jackpots
                 cada vez maiores.
             </p>
 
-            <a href="https://itallo-casimiro.itch.io/dead-mans-jackpot" class="GameButton">
+            <a href="https://itallo-casimiro.itch.io/dead-mans-jackpot" class="GameButton" data-lang="playButton">
                 Jogue na Itch.io
             </a>
         </div>
@@ -81,12 +83,12 @@
 
     <div class="GameShowcase Reverse">
         <div class="ComingSoon">
-            <h1>EM BREVE</h1>
+            <h1 data-lang="comingSoon">EM BREVE</h1>
         </div>
 
         <div class="GameInfo">
-            <h3>Novos Projetos Vindo Aí</h3>
-            <p>
+            <h3 data-lang="futureProjects">Novos Projetos Vindo Aí</h3>
+            <p data-lang="futureProjectsText">
                 Nossa jornada está sendo construída. Mais jogos chegarão no futuro.
             </p>
         </div>
@@ -94,7 +96,7 @@
   </section>
 
   <section class="Team" id="Team">
-    <h2 class="SectionTitle">Nossa Equipe</h2>
+    <h2 class="SectionTitle" data-lang="teamTitle">Nossa Equipe</h2>
 
     <div class="TeamContainer">
 
@@ -103,11 +105,11 @@
 
             <h3>Itallo Casimiro</h3>
 
-            <span class="Role">
+            <span class="Role" data-lang="founderRole">
                 Fundador | Game Designer | Programador
             </span>
 
-            <p>
+            <p data-lang="founderDescription">
                 Fundador da Game Chip's Studios
             </p>
         </div>
@@ -115,21 +117,26 @@
   </section>
 
   <section class="Contact" id="Contact">
-    <div><h2 style="text-align: center; font-size: 3em; margin-bottom: 30px;">Fale Conosco</h2>
-    <p>Tem alguma dúvida sobre nossos jogos, encontrou um bug ou quer sugerir uma melhoria? Envie uma mensagem para nós e ouviremos você!</p>
-    <a href="mailto:gamechipsstudios@gmail.com">gamechipsstudios@gmail.com</a></div>
+    <div><h2 style="text-align: center; font-size: 3em; margin-bottom: 30px;" data-lang="contactTitle">Fale Conosco</h2>
+    <p data-lang="contactDescription">
+        Tem alguma dúvida sobre nossos jogos, encontrou um bug ou quer sugerir uma melhoria? Envie uma mensagem para nós e ouviremos você!
+    </p>
+    <a href="mailto:gamechipsstudios@gmail.com">
+        gamechipsstudios@gmail.com
+    </a>
+    </div>
   </section>
 
   <section class="SocialMedia">
     <img src="Images/Studio/StudioName.png" id="FooterLogo">
     <hr>
     <br>
-    <h2>Siga-nos nas Redes Sociais</h2>
+    <h2 data-lang="socialTitle">Siga-nos nas Redes Sociais</h2>
     <div class="SocialIcons">
       <a href="https://instagram.com/gamechips_studios"><img src="Images/Social/Instagram.png" alt="Instagram" width="32"></a>
       <a href="https://twitter.com/GameChipsSTS"><img src="Images/Social/Twitter.png" alt="Twitter" width="32"></a>
       <a href="https://youtube.com/@GameChipsStudios"><img src="Images/Social/Youtube.png" alt="YouTube" width="32"></a>
-      <a href="#"><img src="Images/Social/PressKit.png" alt="Press Kit" width="32"></a>
+      <a href="https://beacons.ai/gamechipsstudios"><img src="Images/Social/PressKit.png" alt="Press Kit" width="32"></a>
       <a href="https://tiktok.com/@gamechips_studios"><img src="Images/Social/Tiktok.png" alt="TikTok" width="32"></a>
       <a href="https://discord.gg/3gJGKz7Gsh"><img src="Images/Social/Discord.png" alt="Discord" width="32"></a>
       <a href="https://www.linkedin.com/company/gamechipsstudios/"><img src="Images/Social/LinkedIn.png" alt="LinkedIn" width="32"></a>
@@ -137,7 +144,7 @@
   </section>
 
   <footer>
-    <p>&copy; <span id="CurrentYear"></span> Game Chip's Studios. Todos os direitos reservados.</p>
+    <p>&copy; <span id="CurrentYear"></span> <span data-lang="footer">Game Chip's Studios. Todos os direitos reservados.</span></p>
   </footer>
 
   <script src="script.js"></script>
